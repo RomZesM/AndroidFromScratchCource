@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Homework_sandbox_week01</string>
+    <string name="main_activity_header">Take your meal</string>
+    <string name="fresh_potato">Fresh Potato</string>
+    <string name="fresh_banana">Fresh Banana</string>
+    <string name="fresh_apple">Fresh Apple</string>
+    <string name="result_header">What you have to do:</string>
+</resources>
