@@ -28,6 +28,9 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "PotatoButton was clicked", Toast.LENGTH_SHORT).show()
             var apple = SealedClassTesting.Apple (70, "Red", "Jonagold")
             resView?.setText(useMeal(apple));
+
+            //test get method
+            println(apple.varietyInfo)
         })
 
 
@@ -38,7 +41,13 @@ class MainActivity : AppCompatActivity() {
         val button = findViewById<TextView>(R.id.fr_potato_button)
         button.setOnClickListener({
             Toast.makeText(this, "PotatoButton was clicked", Toast.LENGTH_SHORT).show()
+            //create potato with negative weight
+            val potatoTest = SealedClassTesting.Potato(-1, "Green", "BlueEyes")
+            println(potatoTest.weight);
+            potatoTest.weight = -2;
+            println(potatoTest.weight);
             val potato = SealedClassTesting.Potato(100, "Brown", "BlueEyes")
+            println(potato.weight)
             resView.setText(useMeal(potato));
         })
     }
@@ -49,6 +58,7 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "Banana button was clicked", Toast.LENGTH_SHORT).show()
             val banan = SealedClassTesting.Banan (150, "Yellow")
             resView.setText(useMeal(banan))
+
         })
 
     }
