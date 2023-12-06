@@ -1,25 +1,34 @@
 package com.example.homework_sandbox_week01
 
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 
 class MainActivity : AppCompatActivity() {
 
+    var adress = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Spis_Castle_116.jpg/2560px-Spis_Castle_116.jpg"
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         sandboxInit();
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     private fun sandboxInit() {
         val resultView = findViewById<TextView>(R.id.result)
         buttonPotatoInit(resultView)
         buttonBananaInit(resultView)
         buttonAppleInit(resultView)
+        //
+        var imageView = findViewById<ImageView>(R.id.image_view);
+        imageView.getImageFromURL(this, adress, imageView);
     }
 
     private fun buttonAppleInit(resView: TextView?) {
@@ -35,8 +44,7 @@ class MainActivity : AppCompatActivity() {
 
 
     }
-
-
+    
     private fun buttonPotatoInit(resView : TextView) {
         val button = findViewById<TextView>(R.id.fr_potato_button)
         button.setOnClickListener({
