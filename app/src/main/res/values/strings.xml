@@ -5,4 +5,6 @@
     <string name="fresh_banana">Banana</string>
     <string name="fresh_apple">Apple</string>
     <string name="result_header">What you have to do:</string>
+    <string name="next_button_title">Next</string>
+    <string name="get_image_button">Get image</string>
 </resources>

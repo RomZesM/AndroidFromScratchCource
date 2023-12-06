@@ -1,4 +1,4 @@
-package com.example.homework_sandbox_week01
+package com.example.homework_sandbox_week01.utils
 
 sealed class SealedClassTesting{
     class Banan(val weight : Int, val color : String) : SealedClassTesting(){

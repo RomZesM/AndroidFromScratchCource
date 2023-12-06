@@ -1,13 +1,14 @@
 package com.example.homework_sandbox_week01
 
+import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.ImageView
+import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
+import com.example.homework_sandbox_week01.utils.SealedClassTesting
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,9 +27,18 @@ class MainActivity : AppCompatActivity() {
         buttonPotatoInit(resultView)
         buttonBananaInit(resultView)
         buttonAppleInit(resultView)
+        nextButtonInit();
         //
-        var imageView = findViewById<ImageView>(R.id.image_view);
-        imageView.getImageFromURL(this, adress, imageView);
+       // var imageView = findViewById<ImageView>(R.id.image_view);
+       // imageView.getImageFromURL(this, adress);
+    }
+
+    private fun nextButtonInit() {
+        val nextButtonn = findViewById<Button>(R.id.next_button)
+        nextButtonn.setOnClickListener({
+            var intent = Intent(this, ExtensionTesting::class.java);
+            startActivity(intent);
+        })
     }
 
     private fun buttonAppleInit(resView: TextView?) {
